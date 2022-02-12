@@ -54,10 +54,10 @@ function App() {
         <Alert alertMsg={alertMsg}></Alert>
         <div className="my-3 container">
           <Routes>
-            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/textUtils/about" element={<About />}></Route>
             <Route
               exact
-              path="/"
+              path="/textUtils"
               element={
                 <TextArea
                   showAlert={showAlert}
