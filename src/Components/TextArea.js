@@ -34,7 +34,7 @@ export default function TextArea(props) {
         <div className="mb-3">
           <h1 className={`my-3 text-${props.mode==='dark'?'light':'dark'}`}>{props.title}</h1>
           <textarea
-            className={`form-control my-3 bg-${props.mode==='dark'?'secondary':'light'} text-${props.mode==='dark'?'light':'dark'}`}
+            className={`form-control my-3 bg-${props.mode==='dark'?'dark':'light'} text-${props.mode==='dark'?'light':'dark'}`}
             placeholder="Enter Text Here"
             value={text}
             onChange={onChng}
@@ -75,9 +75,9 @@ export default function TextArea(props) {
         <div className="container my-2">
           <h2 className={`text-${props.mode==='dark'?'light':'dark'}`}>Text Summary:</h2>
           <p className={`text-${props.mode==='dark'?'light':'dark'}`}>
-            Word Count: {text.length>0?text.split(" ").length:0}
+            Word Count: {text.split(" ").filter((element)=>{return element.length!==0}).length}
             <br></br>
-            Character Count: {text.length}
+            Character Count: {text.split("").filter((element)=>{return !(element===' ')}).length}
           </p>
           <h2 className={`text-${props.mode==='dark'?'light':'dark'}`}>Preview:</h2>
           <p className={`text-${props.mode==='dark'?'light':'dark'}`} style={{fontStyle:'italic'}}>{text.length>0?text:"Enter your text in the above text box to preview it here"}</p>

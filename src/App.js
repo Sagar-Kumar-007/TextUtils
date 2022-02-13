@@ -4,7 +4,7 @@ import About from "./Components/About";
 import Alert from "./Components/Alert";
 import Navbar from "./Components/Navbar";
 import TextArea from "./Components/TextArea";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -54,7 +54,11 @@ function App() {
         <Alert alertMsg={alertMsg}></Alert>
         <div className="my-3 container">
           <Routes>
-            <Route exact path="/textUtils/about" element={<About />}></Route>
+            <Route
+              exact
+              path="/textUtils/about"
+              element={<About mode={mode} />}
+            ></Route>
             <Route
               exact
               path="/textUtils"
