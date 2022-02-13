@@ -44,6 +44,7 @@ export default function TextArea(props) {
           <div className="d-grid  d-md-flex justify-content-md-center gap-2">
             <button
               type="button"
+              disabled={text.length===0}
               className={`btn btn-${props.mode==='dark'?'secondary':'primary'} my-2 col-lg-3`}
               onClick={cvrtUp}
             >
@@ -51,6 +52,7 @@ export default function TextArea(props) {
             </button>
             <button
               type="button"
+              disabled={text.length===0}
               className={`btn btn-${props.mode==='dark'?'secondary':'primary'} my-2 col-lg-3`}
               onClick={cvrtLow}
             >
@@ -58,6 +60,7 @@ export default function TextArea(props) {
             </button>
             <button
               type="button"
+              disabled={text.length===0}
               className={`btn btn-${props.mode==='dark'?'secondary':'primary'} my-2 col-lg-3`}
               onClick={clearText}
             >
@@ -65,6 +68,7 @@ export default function TextArea(props) {
             </button>
             <button
               type="button"
+              disabled={text.length===0}
               className={`btn btn-${props.mode==='dark'?'secondary':'primary'} my-2 col-lg-3`}
               onClick={copyText}
             >
